@@ -1,1 +1,1 @@
-print ("ahoj, já jsem karel")
+print("čau")
