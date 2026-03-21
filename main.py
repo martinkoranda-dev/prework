@@ -1,0 +1,1 @@
+print ("ahoj, já jsem karel")
