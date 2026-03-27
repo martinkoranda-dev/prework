@@ -23,7 +23,7 @@
 # def pentagon(side):
 #     for i in range(5):
 #         julie.forward(side)
-#         julie.left(72)
+#         julie.left(72) #uhel je 360//pocet vrcholu
 #
 # pentagon(100)
 
