@@ -1,3 +1,5 @@
+'''hero faze 1'''
+
 power_levels = [8, 15, 12, 22, 9]
 heroes = []
 
@@ -12,3 +14,20 @@ for level in power_levels:
         heroes.append(level)
 else:
     print('Recruitment of candidates has ended.')
+
+'''hero faze 2'''
+
+hero_power = []
+print(hero_power)
+
+hero_power.append(heroes[0])
+while hero_power[0] < 20:
+    hero_power[0] = hero_power[0] + 1
+    if hero_power[0] % 2 == 0:
+        print(hero_power[0])
+        hero_power[0] = hero_power[0] + 1
+        print(f"Training: level reached - Strength bonus gained!")
+    else:
+        print(f"Training: level {hero_power}reached")
+
+print(hero_power)
