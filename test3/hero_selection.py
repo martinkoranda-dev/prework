@@ -1,3 +1,4 @@
+import random
 '''hero faze 1'''
 
 power_levels = [8, 15, 12, 22, 9]
@@ -17,17 +18,19 @@ else:
 
 '''hero faze 2'''
 
-hero_power = []
+hero_power = heroes[0]
 print(hero_power)
 
-hero_power.append(heroes[0])
-while hero_power[0] < 20:
-    hero_power[0] = hero_power[0] + 1
-    if hero_power[0] % 2 == 0:
-        print(hero_power[0])
-        hero_power[0] = hero_power[0] + 1
-        print(f"Training: level reached - Strength bonus gained!")
+while hero_power < 20:
+    hero_power += 1
+    if hero_power % 2 == 0:
+        print(f"Training: level {hero_power} reached - Strength bonus gained!")
     else:
-        print(f"Training: level {hero_power}reached")
+        print(f"Training: level {hero_power} reached")
 
-print(hero_power)
+'''hero faze 3'''
+names = ["Karel", "Alice", "Bob"]
+our_company = ", ".join(names)
+print(our_company)
+boss = random.choice(names)
+print(f"The boss is {boss}.")
