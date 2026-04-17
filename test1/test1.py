@@ -1,77 +1,69 @@
-# from turtle import Turtle, done
-# t=Turtle()
+'''
+1) Vytvoří tři smysluplně pojmenované proměnné: jednu typu String (např. jméno), jednu typu Integer nebo Float (např.
+věk nebo výška) a jednu typu Boolean (např. informace, zda má uživatel rád programování).
+
+2) Vytvoří prázdný seznam (list).
+
+3) Pomocí správné metody tyto tři proměnné do seznamu postupně přidá.'''
+
+# name = "Karel"
+# age = 5
+# is_programmer = True
 #
-# for i in range(4):
-#     t.forward(100)
-#     t.left(90)
-# done()
-
-# from turtle import Turtle # obecny ctverec definovany manualne
 #
-# julie = Turtle()
+# mix = []
+# mix.append(name)
+# mix.append(age)
+# mix.append(is_programmer)
 #
-# def square(side):
-#     for i in range(4):
-#         julie.forward(side)  # jde dopredu o side
-#         julie.left(90)       # zahne o 90stupnu
+# print(mix)
 #
-# square(200)
-
-# from turtle import Turtle #obecny pentagon
-# julie = Turtle()
+# print(mix[1])
 #
-# def pentagon(side):
-#     for i in range(5):
-#         julie.forward(side)
-#         julie.left(72) #uhel je 360//pocet vrcholu
+# future_age = 10 + age
 #
-# pentagon(100)
-
-# from turtle import Turtle #obecny mnohouhelnik
+# print(f"{name} will be {future_age} old.")
 #
-# julie = Turtle()
+# print(f"{name} will be "+str(future_age)+" old.")
 #
-# def polygon(pocet_stran, delka_strany):
+# if future_age % 2 == 0:
+#     print(f"{future_age} is even number.")
+# else:
+#     print(f"{future_age} is odd number.")
 #
-#     uhel = 360 / pocet_stran
+# friends_age = [12, 17, 16]
 #
-#     for i in range(pocet_stran):
-#         julie.forward(delka_strany)
-#         julie.left(uhel)  # Želva zatočí o námi spočítaný úhel
+# for i in range(len(friends_age)):
+#     friends_age[i] = friends_age[i] + 1
+# print(friends_age)
 #
-# polygon(pocet_stran=7, delka_strany=50)
-# polygon(pocet_stran=5, delka_strany=100)
+# karel_age = 10
+#
+# while karel_age < 18:
+#     karel_age += 1
+#     print(karel_age)
+#     if karel_age >= 13 and karel_age < 18:
+#         print(f"Karel is teenager: {karel_age}")
 
-#opilec na ceste
+# visitors = [12, 16, 15, 20, 17]
+# for visitor in visitors:
+#     if visitor < 13:
+#         print(f"age {visitor}, skipping kid")
+#         continue
+#     if visitor >= 18:
+#         print(f"age {visitor}, Adult found")
+#         break
+# else:
+#     print("Search finished.")
 
-from random import randint
+vip_guests = ["Alice", "Bob", "Charlie"]
+my_str = ", ".join(vip_guests)
+print(my_str)
 
-def drunkman_simulator(size, steps):
-
-    pozice = size // 2 # 1. Opilec začíná přesně v polovině cesty
-
-    # Smyčka pro každý krok
-    for i in range(steps):
-        # 2. Vykreslení aktuální situace na ulici (tohle jsem ti připravil, to bývá pro začátečníky těžké)
-        leva_ulice = ". " * (pozice - 1)
-        prava_ulice = " ." * (size - pozice - 1)
-        print(f"home {leva_ulice}*{prava_ulice} pub")
-
-        krok = randint(0, 1) # 3. Hození mincí (Náhodný krok)
-
-        if krok == 0:
-            pozice = pozice - 1
-        else:
-            pozice = pozice + 1
-
-        if pozice == 0:
-            print("Doma!")
-            break
-        elif pozice == size:
-            print("Zase v hospode!")
-            break
-    if pozice != 0 and pozice != size:
-        print("Opilec usnul na ulici!")
-
-# Zkušební spuštění (velikost 10, max 100 kroků)
-drunkman_simulator(10, 100)
+from random import shuffle, choice
+print(vip_guests)
+lucky_guest = choice(vip_guests)
+print(lucky_guest)
+shuffle(vip_guests)
+print(vip_guests)
+print(vip_guests[0])
